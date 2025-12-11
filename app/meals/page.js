@@ -6,6 +6,8 @@ import { Suspense } from "react";
 
 async function Meals() {
   const meals = await getMeals();
+
+  throw new Error("Failed to load meal");
   return <MealsGrid meals={meals} />;
 }
 
